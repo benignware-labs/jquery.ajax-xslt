@@ -71,6 +71,10 @@ The result should look like this:
       <td>Accepts a type `xslt` which triggers xslt processing.</td>
     </tr>
     <tr>
+      <td>unescapeOutput</td>
+      <td>Specify true to unescape output. This addresses missing of `xsl:disable-out-escaping` in Firefox. Defaults to `false`</td>
+    </tr>
+    <tr>
       <td>xmlStylesheet</td>
       <td>Define a custom xsl-template. This will override a possibly embedded link in the xml-document.</td>
     </tr>

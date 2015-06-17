@@ -56,21 +56,19 @@
       }
     }
     
-    // Apply post processing
-    if (result) {
-      if (options.disableOutputEscaping) {
-        $(result).find('*').contents().filter(function () { return this.nodeType === 3; }).each(function() {
-          var frag = document.createDocumentFragment();
-          var holder = document.createElement("div");
-          holder.innerHTML = this.nodeValue;
-          $(holder).contents().each(function() {
-            frag.appendChild(this);
-          });
-          $(frag).insertBefore(this);
-          $(this).remove();
+    function unescapeOutput(result) {
+      $(result).find('*').contents().filter(function () { return this.nodeType === 3; }).each(function() {
+        var frag = document.createDocumentFragment();
+        var holder = document.createElement("div");
+        holder.innerHTML = this.nodeValue;
+        $(holder).contents().each(function() {
+          frag.appendChild(this);
         });
-      }
+        $(frag).insertBefore(this);
+        $(this).remove();
+      });
     }
+    
     return result;
   }
   
@@ -96,6 +94,9 @@
                         // Transform
                         var result = transformToDocument(xml, xmlStylesheet, options);
                         if (result) {
+                          if (options.unescapeOutput) {
+                            unescapeOutput(result);
+                          }
                           // Success
                           completeCallback(200, "Transform successful", {xslt: result});
                         } else {
