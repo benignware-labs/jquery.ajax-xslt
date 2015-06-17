@@ -7,7 +7,7 @@ This plugin lets you transform ajax xml response via xslt on the fly.
 ## Usage
 
 ```xml
-<!-- XML Data -->
+<!-- test.xml -->
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="text/xsl" href="test.xsl"?>
 <test> 
@@ -16,7 +16,7 @@ This plugin lets you transform ajax xml response via xslt on the fly.
 ```
 
 ```xml
-<!-- XML Stylesheet -->
+<!-- test.xsl -->
 <?xml version="1.0"?> 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
     version="1.0">
