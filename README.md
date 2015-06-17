@@ -72,7 +72,7 @@ The result should look like this:
     </tr>
     <tr>
       <td>unescapeOutput</td>
-      <td>Specify true to unescape output. This addresses missing of `xsl:disable-out-escaping` in Firefox. Defaults to `false`</td>
+      <td>Specify `true` to unescape output. This addresses missing of `xsl:disable-out-escaping` in Firefox. Defaults to `false`</td>
     </tr>
     <tr>
       <td>xmlStylesheet</td>
