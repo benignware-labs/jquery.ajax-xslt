@@ -35,7 +35,7 @@ This plugin lets you transform ajax xml response via xslt on the fly.
 
 ```js
 $.ajax({
-  url: 'fixtures/test.xml',
+  url: 'test.xml',
   dataType: 'xslt'
 }).done(function(result) {
   // Result contains transformed xml
