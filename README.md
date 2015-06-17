@@ -42,6 +42,20 @@ $.ajax({
 });
 ```
 
+The result should look like this:
+
+```html
+<html>
+   <head>
+      <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+      <title>Hello World!</title>
+   </head>
+   <body>
+      <h1>Hello World!</h1>
+   </body>
+</html>
+```
+
 ## Options
 
 <table>
