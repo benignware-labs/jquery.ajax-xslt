@@ -80,3 +80,7 @@ The result should look like this:
     </tr>
   </tbody>
 </table>
+
+## MSXML
+
+Apparently namespaces are not supported in Internet Explorer. It complains about `Reference to undeclared namespace prefix: 'xxx'`. Try to get rid of namespaces in your xsl-template by refactoring your xpath-queries from `xxx:element` to `*[local-name()='element'].
